@@ -25,13 +25,16 @@ export default class Root extends React.Component {
   }
   public render(): JSX.Element {
     return (
-      <form onSubmit={this.submit}>
-        <h1>Uploader</h1>
-        <input required  type="text" onChange={this.handleNameChange} placeholder="Name the kitten, plz"/>
-        <label htmlFor="files">Upload a kitten image</label>
-        <input required id="files" type="file" onChange={this.handleFileChange} accept="image/*"/>
-        <input type="submit" />
-      </form>
+      <>
+        <form onSubmit={this.submit}>
+          <h1>Uploader</h1>
+          <input required  type="text" onChange={this.handleNameChange} placeholder="Name the kitten, plz"/>
+          <label htmlFor="files">Upload a kitten image</label>
+          <input required id="files" type="file" onChange={this.handleFileChange} accept="image/*"/>
+          <input type="submit" />
+        </form>
+        {this.state.success ? <div className="alert alert-info" >Upload successful</div> : <></>}
+      </>
     )
   }
 }
