@@ -1,7 +1,7 @@
-defmodule KittenGrapqhlWeb.KittenControllerTest do
-  use KittenGrapqhlWeb.ConnCase
+defmodule KittenGraphqlWeb.KittenControllerTest do
+  use KittenGraphqlWeb.ConnCase
 
-  alias KittenGrapqhl.Kittens
+  alias KittenGraphql.Kittens
 
   @create_attrs %{name: "some name"}
   @update_attrs %{name: "some updated name"}
@@ -75,6 +75,7 @@ defmodule KittenGrapqhlWeb.KittenControllerTest do
     test "deletes chosen kitten", %{conn: conn, kitten: kitten} do
       conn = delete(conn, Routes.kitten_path(conn, :delete, kitten))
       assert redirected_to(conn) == Routes.kitten_path(conn, :index)
+
       assert_error_sent 404, fn ->
         get(conn, Routes.kitten_path(conn, :show, kitten))
       end

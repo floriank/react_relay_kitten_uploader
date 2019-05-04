@@ -1,10 +1,10 @@
-defmodule KittenGrapqhl.KittensTest do
-  use KittenGrapqhl.DataCase
+defmodule KittenGraphql.KittensTest do
+  use KittenGraphql.DataCase
 
-  alias KittenGrapqhl.Kittens
+  alias KittenGraphql.Kittens
 
   describe "kittens" do
-    alias KittenGrapqhl.Kittens.Kitten
+    alias KittenGraphql.Kittens.Kitten
 
     @valid_attrs %{name: "some name"}
     @update_attrs %{name: "some updated name"}

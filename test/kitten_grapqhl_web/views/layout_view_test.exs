@@ -1,3 +1,3 @@
-defmodule KittenGrapqhlWeb.LayoutViewTest do
-  use KittenGrapqhlWeb.ConnCase, async: true
+defmodule KittenGraphqlWeb.LayoutViewTest do
+  use KittenGraphqlWeb.ConnCase, async: true
 end

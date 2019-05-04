@@ -1,9 +1,8 @@
-defmodule KittenGrapqhlWeb.Schema do
+defmodule KittenGraphqlWeb.Schema do
   use Absinthe.Schema
   use Absinthe.Relay.Schema, :modern
 
-  # Important: This is imported to get the :upload type
-  import_types(Absinthe.Plug.Types)
+  alias KittenGraphqlWeb.Resolvers
 
   node object(:kitten) do
     field :name, :string
@@ -22,12 +21,15 @@ defmodule KittenGrapqhlWeb.Schema do
   end
 
   mutation do
+    # Important: This is imported to get the :upload type
+    import_types(Absinthe.Plug.Types)
+
     @desc "Create a new kitten, awww *_*"
     payload field :new_kitten do
       @desc "Input for a new kitten"
       input do
         @desc "The photo of the kitten"
-        field(:card_image, non_null(:upload))
+        field(:image, :upload)
 
         @desc "The name of the kitten"
         field(:name, non_null(:string))

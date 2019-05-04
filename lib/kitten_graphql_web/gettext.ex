@@ -1,11 +1,11 @@
-defmodule KittenGrapqhlWeb.Gettext do
+defmodule KittenGraphqlWeb.Gettext do
   @moduledoc """
   A module providing Internationalization with a gettext-based API.
 
   By using [Gettext](https://hexdocs.pm/gettext),
   your module gains a set of macros for translations, for example:
 
-      import KittenGrapqhlWeb.Gettext
+      import KittenGraphqlWeb.Gettext
 
       # Simple translation
       gettext("Here is the string to translate")
@@ -20,5 +20,5 @@ defmodule KittenGrapqhlWeb.Gettext do
 
   See the [Gettext Docs](https://hexdocs.pm/gettext) for detailed usage.
   """
-  use Gettext, otp_app: :kitten_grapqhl
+  use Gettext, otp_app: :kitten_graphql
 end

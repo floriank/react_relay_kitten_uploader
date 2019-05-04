@@ -1,12 +1,12 @@
-defmodule KittenGrapqhlWeb do
+defmodule KittenGraphqlWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use KittenGrapqhlWeb, :controller
-      use KittenGrapqhlWeb, :view
+      use KittenGraphqlWeb, :controller
+      use KittenGraphqlWeb, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,19 +19,19 @@ defmodule KittenGrapqhlWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: KittenGrapqhlWeb
+      use Phoenix.Controller, namespace: KittenGraphqlWeb
 
       import Plug.Conn
-      import KittenGrapqhlWeb.Gettext
-      alias KittenGrapqhlWeb.Router.Helpers, as: Routes
+      import KittenGraphqlWeb.Gettext
+      alias KittenGraphqlWeb.Router.Helpers, as: Routes
     end
   end
 
   def view do
     quote do
       use Phoenix.View,
-        root: "lib/kitten_grapqhl_web/templates",
-        namespace: KittenGrapqhlWeb
+        root: "lib/kitten_graphql_web/templates",
+        namespace: KittenGraphqlWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_flash: 1, get_flash: 2, view_module: 1]
@@ -39,9 +39,9 @@ defmodule KittenGrapqhlWeb do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import KittenGrapqhlWeb.ErrorHelpers
-      import KittenGrapqhlWeb.Gettext
-      alias KittenGrapqhlWeb.Router.Helpers, as: Routes
+      import KittenGraphqlWeb.ErrorHelpers
+      import KittenGraphqlWeb.Gettext
+      alias KittenGraphqlWeb.Router.Helpers, as: Routes
     end
   end
 
@@ -56,7 +56,7 @@ defmodule KittenGrapqhlWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import KittenGrapqhlWeb.Gettext
+      import KittenGraphqlWeb.Gettext
     end
   end
 

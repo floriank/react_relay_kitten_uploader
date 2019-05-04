@@ -6,7 +6,7 @@ use Mix.Config
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
-config :kitten_grapqhl, KittenGrapqhlWeb.Endpoint,
+config :kitten_graphql, KittenGraphqlWeb.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,
@@ -46,13 +46,13 @@ config :kitten_grapqhl, KittenGrapqhlWeb.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :kitten_grapqhl, KittenGrapqhlWeb.Endpoint,
+config :kitten_graphql, KittenGraphqlWeb.Endpoint,
   live_reload: [
     patterns: [
       ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
       ~r{priv/gettext/.*(po)$},
-      ~r{lib/kitten_grapqhl_web/views/.*(ex)$},
-      ~r{lib/kitten_grapqhl_web/templates/.*(eex)$}
+      ~r{lib/kitten_graphql_web/views/.*(ex)$},
+      ~r{lib/kitten_graphql_web/templates/.*(eex)$}
     ]
   ]
 
@@ -67,7 +67,7 @@ config :phoenix, :stacktrace_depth, 20
 config :phoenix, :plug_init_mode, :runtime
 
 # Configure your database
-config :kitten_grapqhl, KittenGrapqhl.Repo,
+config :kitten_graphql, KittenGraphql.Repo,
   username: System.get_env("POSTGRES_USER"),
   password: System.get_env("POSTGRES_PASSWORD"),
   database: System.get_env("POSTGRES_DB"),

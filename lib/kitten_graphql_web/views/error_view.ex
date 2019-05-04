@@ -1,5 +1,5 @@
-defmodule KittenGrapqhlWeb.ErrorView do
-  use KittenGrapqhlWeb, :view
+defmodule KittenGraphqlWeb.ErrorView do
+  use KittenGraphqlWeb, :view
 
   # If you want to customize a particular status code
   # for a certain format, you may uncomment below.

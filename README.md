@@ -1,4 +1,4 @@
-# KittenGrapqhl
+# KittenGraphql
 
 To start your Phoenix server:
 

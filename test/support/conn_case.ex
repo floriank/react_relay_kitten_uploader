@@ -1,4 +1,4 @@
-defmodule KittenGrapqhlWeb.ConnCase do
+defmodule KittenGraphqlWeb.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -19,18 +19,18 @@ defmodule KittenGrapqhlWeb.ConnCase do
     quote do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
-      alias KittenGrapqhlWeb.Router.Helpers, as: Routes
+      alias KittenGraphqlWeb.Router.Helpers, as: Routes
 
       # The default endpoint for testing
-      @endpoint KittenGrapqhlWeb.Endpoint
+      @endpoint KittenGraphqlWeb.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(KittenGrapqhl.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(KittenGraphql.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(KittenGrapqhl.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(KittenGraphql.Repo, {:shared, self()})
     end
 
     {:ok, conn: Phoenix.ConnTest.build_conn()}

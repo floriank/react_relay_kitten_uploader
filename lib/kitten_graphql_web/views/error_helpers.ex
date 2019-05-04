@@ -1,4 +1,4 @@
-defmodule KittenGrapqhlWeb.ErrorHelpers do
+defmodule KittenGraphqlWeb.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -36,9 +36,9 @@ defmodule KittenGrapqhlWeb.ErrorHelpers do
     # should be written to the errors.po file. The :count option is
     # set by Ecto and indicates we should also apply plural rules.
     if count = opts[:count] do
-      Gettext.dngettext(KittenGrapqhlWeb.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(KittenGraphqlWeb.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(KittenGrapqhlWeb.Gettext, "errors", msg, opts)
+      Gettext.dgettext(KittenGraphqlWeb.Gettext, "errors", msg, opts)
     end
   end
 end

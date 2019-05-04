@@ -1,5 +1,6 @@
 import { Environment, RecordSource, Store } from 'relay-runtime'
-
+import multipartMiddleware from './multipart_middleware'
+import 'regenerator-runtime/runtime'
 import {
   RelayNetworkLayer,
   urlMiddleware,
@@ -10,6 +11,8 @@ import {
 
 const network = new RelayNetworkLayer(
   [
+    // insert the middleware into the stack
+    multipartMiddleware,
     urlMiddleware({
       url: req => Promise.resolve('/api/graph')
     }),

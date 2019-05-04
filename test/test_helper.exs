@@ -1,2 +1,2 @@
 ExUnit.start()
-Ecto.Adapters.SQL.Sandbox.mode(KittenGrapqhl.Repo, :manual)
+Ecto.Adapters.SQL.Sandbox.mode(KittenGraphql.Repo, :manual)

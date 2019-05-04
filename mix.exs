@@ -1,9 +1,9 @@
-defmodule KittenGrapqhl.MixProject do
+defmodule KittenGraphql.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :kitten_grapqhl,
+      app: :kitten_graphql,
       version: "0.1.0",
       elixir: "~> 1.5",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -19,7 +19,7 @@ defmodule KittenGrapqhl.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {KittenGrapqhl.Application, []},
+      mod: {KittenGraphql.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end
@@ -36,6 +36,7 @@ defmodule KittenGrapqhl.MixProject do
       {:absinthe, "~> 1.4"},
       {:absinthe_plug, "~> 1.4"},
       {:absinthe_relay, "~> 1.4"},
+      {:absinthe_phoenix, "~> 1.4"},
       {:phoenix, "~> 1.4.1"},
       {:phoenix_pubsub, "~> 1.1"},
       {:phoenix_ecto, "~> 4.0"},

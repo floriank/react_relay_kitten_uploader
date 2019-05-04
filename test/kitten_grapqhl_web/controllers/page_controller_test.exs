@@ -1,5 +1,5 @@
-defmodule KittenGrapqhlWeb.PageControllerTest do
-  use KittenGrapqhlWeb.ConnCase
+defmodule KittenGraphqlWeb.PageControllerTest do
+  use KittenGraphqlWeb.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get(conn, "/")

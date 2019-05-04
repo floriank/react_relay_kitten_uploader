@@ -1,6 +1,6 @@
-defmodule KittenGrapqhl do
+defmodule KittenGraphql do
   @moduledoc """
-  KittenGrapqhl keeps the contexts that define your domain
+  KittenGraphql keeps the contexts that define your domain
   and business logic.
 
   Contexts are also responsible for managing your data, regardless

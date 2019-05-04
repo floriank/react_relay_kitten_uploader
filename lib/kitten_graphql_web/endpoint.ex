@@ -1,7 +1,8 @@
-defmodule KittenGrapqhlWeb.Endpoint do
-  use Phoenix.Endpoint, otp_app: :kitten_grapqhl
+defmodule KittenGraphqlWeb.Endpoint do
+  use Phoenix.Endpoint, otp_app: :kitten_graphql
+  use Absinthe.Phoenix.Endpoint
 
-  socket "/socket", KittenGrapqhlWeb.UserSocket,
+  socket "/socket", KittenGraphqlWeb.UserSocket,
     websocket: true,
     longpoll: false
 
@@ -11,7 +12,7 @@ defmodule KittenGrapqhlWeb.Endpoint do
   # when deploying your static files in production.
   plug Plug.Static,
     at: "/",
-    from: :kitten_grapqhl,
+    from: :kitten_graphql,
     gzip: false,
     only: ~w(css fonts images js favicon.ico robots.txt)
 
@@ -42,5 +43,5 @@ defmodule KittenGrapqhlWeb.Endpoint do
     key: "_kitten_grapqhl_key",
     signing_salt: "DIwxyxz/"
 
-  plug KittenGrapqhlWeb.Router
+  plug KittenGraphqlWeb.Router
 end

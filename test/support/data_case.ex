@@ -1,4 +1,4 @@
-defmodule KittenGrapqhl.DataCase do
+defmodule KittenGraphql.DataCase do
   @moduledoc """
   This module defines the setup for tests requiring
   access to the application's data layer.
@@ -16,20 +16,20 @@ defmodule KittenGrapqhl.DataCase do
 
   using do
     quote do
-      alias KittenGrapqhl.Repo
+      alias KittenGraphql.Repo
 
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
-      import KittenGrapqhl.DataCase
+      import KittenGraphql.DataCase
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(KittenGrapqhl.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(KittenGraphql.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(KittenGrapqhl.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(KittenGraphql.Repo, {:shared, self()})
     end
 
     :ok

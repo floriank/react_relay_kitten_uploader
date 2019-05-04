@@ -1,11 +1,11 @@
 {
-    "presets": [
-        "@babel/preset-env",
-        "@babel/preset-react",
-        "@babel/preset-typescript"
-
-    ],
-    "plugins": [
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-react",
+    "@babel/preset-typescript"
+  ],
+  "plugins": [
+    "relay",
     "@babel/plugin-proposal-class-properties",
     "@babel/plugin-proposal-object-rest-spread"
   ]

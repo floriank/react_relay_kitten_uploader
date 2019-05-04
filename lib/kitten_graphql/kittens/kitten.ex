@@ -1,4 +1,4 @@
-defmodule KittenGrapqhl.Kittens.Kitten do
+defmodule KittenGraphql.Kittens.Kitten do
   use Ecto.Schema
   import Ecto.Changeset
 

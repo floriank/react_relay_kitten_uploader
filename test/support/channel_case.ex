@@ -1,4 +1,4 @@
-defmodule KittenGrapqhlWeb.ChannelCase do
+defmodule KittenGraphqlWeb.ChannelCase do
   @moduledoc """
   This module defines the test case to be used by
   channel tests.
@@ -21,15 +21,15 @@ defmodule KittenGrapqhlWeb.ChannelCase do
       use Phoenix.ChannelTest
 
       # The default endpoint for testing
-      @endpoint KittenGrapqhlWeb.Endpoint
+      @endpoint KittenGraphqlWeb.Endpoint
     end
   end
 
   setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(KittenGrapqhl.Repo)
+    :ok = Ecto.Adapters.SQL.Sandbox.checkout(KittenGraphql.Repo)
 
     unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(KittenGrapqhl.Repo, {:shared, self()})
+      Ecto.Adapters.SQL.Sandbox.mode(KittenGraphql.Repo, {:shared, self()})
     end
 
     :ok

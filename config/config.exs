@@ -7,15 +7,15 @@
 # General application configuration
 use Mix.Config
 
-config :kitten_grapqhl,
-  ecto_repos: [KittenGrapqhl.Repo]
+config :kitten_graphql,
+  ecto_repos: [KittenGraphql.Repo]
 
 # Configures the endpoint
-config :kitten_grapqhl, KittenGrapqhlWeb.Endpoint,
+config :kitten_graphql, KittenGraphqlWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "/FfQK5Uahbwm4M7ilejlhnRcwmvdJSnuWoo0XPd1ePl13FhwhGN21m1XV/tbTKW/",
-  render_errors: [view: KittenGrapqhlWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: KittenGrapqhl.PubSub, adapter: Phoenix.PubSub.PG2]
+  render_errors: [view: KittenGraphqlWeb.ErrorView, accepts: ~w(html json)],
+  pubsub: [name: KittenGraphql.PubSub, adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
 config :logger, :console,
@@ -24,6 +24,8 @@ config :logger, :console,
 
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
+
+config :absinthe, :schema, KittenGraphqlWeb.Schema
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

@@ -1,12 +1,12 @@
-defmodule KittenGrapqhl.Kittens do
+defmodule KittenGraphql.Kittens do
   @moduledoc """
   The Kittens context.
   """
 
   import Ecto.Query, warn: false
-  alias KittenGrapqhl.Repo
+  alias KittenGraphql.Repo
 
-  alias KittenGrapqhl.Kittens.Kitten
+  alias KittenGraphql.Kittens.Kitten
 
   @doc """
   Returns the list of kittens.
