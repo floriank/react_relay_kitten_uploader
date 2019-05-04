@@ -4,6 +4,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Root from './components/Root'
 
-let element: HTMLElement = document.getElementById("react-kittens")
+let element: HTMLElement | null = document.getElementById("react-kittens")
 
-ReactDOM.render(element, <Root />)
+if (element) {
+  ReactDOM.render( <Root />, element)
+}

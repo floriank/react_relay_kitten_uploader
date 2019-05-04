@@ -8,7 +8,6 @@ import {
   perfMiddleware,
 } from 'react-relay-network-modern';
 
-
 const network = new RelayNetworkLayer(
   [
     urlMiddleware({
@@ -18,8 +17,7 @@ const network = new RelayNetworkLayer(
     __DEV__ ? loggerMiddleware() : null,
     __DEV__ ? errorMiddleware() : null,
     __DEV__ ? perfMiddleware() : null
-  ],
-  { subscribeFn: createSubscriber(absintheSocket) }
+  ]
 );
 
 const source = new RecordSource();
