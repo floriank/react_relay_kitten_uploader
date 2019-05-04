@@ -1,0 +1,29 @@
+version: '3.4'
+
+services:
+  app:
+    build:
+      context: .
+    env_file:
+      - ./compose/postgres.env
+    environment:
+      MIX_BUILD_PATH: /mix/build
+      MIX_DEPS_PATH: /mix/deps
+    volumes:
+      - .:/opt/app:z
+      - deps:/mix/deps:Z
+      - build:/mix/build:Z
+    ports:
+      - "4000:4000"
+    depends_on:
+      - db
+  db:
+    image: postgres:10
+    env_file:
+      - ./compose/postgres.env
+    volumes:
+      - /var/lib/postgresql
+
+volumes:
+  deps: {}
+  build: {}
