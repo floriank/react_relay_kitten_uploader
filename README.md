@@ -49,5 +49,9 @@ Please note that you __do not have to run yarn for development__, as the Applica
 
 Send me an email or open an issue, both is fine. I am always interested in feedback.
 
-## Additionl resources
+## Additional resources
 
+- [relay environment docs](https://facebook.github.io/relay/docs/en/relay-environment.html)
+- The [uploader discussion](https://github.com/absinthe-graphql/absinthe_plug/issues/114) on complying with the [suggestion](https://github.com/jaydenseric/graphql-multipart-request-spec) for the multipart request spec, which absinthe does not support (as of yet)
+- [The Apollo upload client](https://github.com/jaydenseric/apollo-upload-client) which supports the spec
+- The most [excellent @ScripterSugar providing the middleware](https://github.com/relay-tools/react-relay-network-modern/issues/41#issuecomment-468646856) for the nodejs based reference middleware
